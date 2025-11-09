@@ -1,0 +1,38 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+ /* border: 1px solid black; */
+}
+
+body { 
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bgChange 0.1s linear 0s infinite;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes bgChange {
+    0% {
+        background: white;
+    }
+    25% {
+        background: red;
+    }
+    50% {
+        background: green;
+    }
+    75% {
+        background: blue;
+    }
+    100% {
+        background: white;
+    }
+}
