@@ -1,7 +1,7 @@
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow: hidden;
- /* border: 1px solid black; */
+    /* border: 1px solid black; */ 
 }
 
 body { 
@@ -10,29 +10,72 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: bgChange 0.1s linear 0s infinite;
+    background: RGBA( 128, 128, 128, 0.5);
+}
+
+img {
+    height: 50px;
+    width: 50px;
+    display: none;
+}
+
+#downlded {
+    display: none;
+    color: green;
 }
 
 .message {
+    height: 30%;
+    width: 40%;
+    border: 2px solid black;
+    text-align: center;
+    margin: 0;
+    text-decoration: none;
+}
+
+a {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+    width: 50%;
+    height: 60%;
+    cursor: pointer;
+    animation: buttonChange 1s ease-in-out 0s infinite;
 }
 
-@keyframes bgChange {
+.fakeLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+}
+
+@keyframes buttonChange {
     0% {
-        background: white;
-    }
-    25% {
-        background: red;
+        background: green;
+        color: white;
     }
     50% {
-        background: green;
-    }
-    75% {
-        background: blue;
+        background: black;
+        color: red;
     }
     100% {
-        background: white;
+        background: green;
+        color: white;
+    }
+}
+
+@media (max-width: 70em) {
+    a {
+    width: 80%;
+    height: 60%;
+}
+
+    .message {
+        font-size: 80%;
+        height: 40%;
+        width: 50%;
     }
 }
